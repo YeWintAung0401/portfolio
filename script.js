@@ -1,5 +1,5 @@
 function calculateExperience() {
-  const start = new Date("2023-07-01");
+  const start = new Date("2023-06-01");
   const today = new Date();
 
   let years = today.getFullYear() - start.getFullYear();
