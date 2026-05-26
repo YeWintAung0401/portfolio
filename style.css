@@ -50,8 +50,9 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #091321, #111d3a);
-    padding: 0 20px; /* Prevent text touching edges on small screens */
+    background: #07111F;
+    background: linear-gradient(0deg, rgba(7, 17, 31, 1) 9%, rgba(17, 38, 82, 1) 55%);
+    padding: 0 20px;
 }
 
 .hero h1 {
