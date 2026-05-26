@@ -16,10 +16,9 @@ body {
 }
 
 .navbar {
-    /* position: fixed; */
-    height: 10vh;
+    position: fixed;
     width: 100%;
-    padding: 20px 60px;
+    padding: 10px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center; /* Added for vertical alignment */
@@ -46,7 +45,7 @@ body {
 }
 
 .hero {
-    height: 90vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
