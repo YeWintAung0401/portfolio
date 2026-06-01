@@ -1,5 +1,5 @@
 function calculateExperience() {
-  const start = new Date("2023-06-01");
+  const start = new Date("2023-07-01");
   const today = new Date();
 
   let years = today.getFullYear() - start.getFullYear();
@@ -14,8 +14,19 @@ function calculateExperience() {
     months += 12;
   }
 
-  document.getElementById("workingDays").innerText =
-    `${years} year${years !== 1 ? "s" : ""} ${months} month${months !== 1 ? "s" : ""}`;
+  let yearStr = "";
+  if (years > 0) {
+    yearStr = `${years} year${years !== 1 ? "s" : ""}`;
+  }
+
+  let monthStr = "";
+  if (months > 0) {
+    monthStr = `${months} month${months !== 1 ? "s" : ""}`;
+  }
+
+  const displayStr = [yearStr, monthStr].filter(Boolean).join(" ");
+
+  document.getElementById("workingDays").innerText = displayStr || "0 months";
 }
 
 calculateExperience();
