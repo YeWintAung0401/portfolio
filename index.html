@@ -179,6 +179,100 @@
         </div>
     </section>
 
+    <!-- ── RECOMMENDATIONS SECTION ── add before #contact section -->
+    <section id="recommendations" class="glass-section recommendations-section">
+        <h2 class="section-title">Recommendations</h2>
+
+        <!-- Toolbar — Add button only -->
+        <div class="rec-toolbar">
+            <button class="rec-btn rec-btn-primary" onclick="openModal('add')">
+                <i class="fas fa-plus"></i> Add Recommendation
+            </button>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="recGrid" class="rec-grid">
+            <div class="rec-loader"><i class="fas fa-spinner fa-spin"></i> Loading...</div>
+        </div>
+
+        <!-- Count -->
+        <p id="recCount" class="rec-count"></p>
+
+        <!-- Add / Edit Modal -->
+        <div id="recModal" class="rec-overlay" onclick="handleOverlayClick(event)">
+            <div class="rec-modal">
+                <div class="rec-modal-header">
+                    <h3 id="modalTitle">Add Recommendation</h3>
+                    <button class="rec-close-btn" onclick="closeModal()"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="rec-modal-body">
+                    <input type="hidden" id="recId">
+                    <div class="rec-field">
+                        <label>Recommender Name <span class="rec-required">*</span></label>
+                        <input type="text" id="recName" class="rec-input" placeholder="e.g. John Doe">
+                    </div>
+                    <div class="rec-field-row">
+                        <div class="rec-field">
+                            <label>Position Title</label>
+                            <input type="text" id="recPosition" class="rec-input" placeholder="e.g. Senior Developer">
+                        </div>
+                        <div class="rec-field">
+                            <label>Company Name</label>
+                            <input type="text" id="recCompany2" class="rec-input" placeholder="e.g. Tech Corp">
+                        </div>
+                    </div>
+                    <div class="rec-field">
+                        <label>Recommendation <span class="rec-required">*</span></label>
+                        <textarea id="recText" class="rec-input rec-textarea" placeholder="Write the recommendation..."></textarea>
+                    </div>
+                    <div class="rec-field">
+                        <label>Rating</label>
+                        <div class="rec-star-picker" id="starPicker">
+                            <span class="rec-star" data-val="1" onclick="setRating(1)">★</span>
+                            <span class="rec-star" data-val="2" onclick="setRating(2)">★</span>
+                            <span class="rec-star" data-val="3" onclick="setRating(3)">★</span>
+                            <span class="rec-star" data-val="4" onclick="setRating(4)">★</span>
+                            <span class="rec-star" data-val="5" onclick="setRating(5)">★</span>
+                        </div>
+                        <input type="hidden" id="recRating" value="5">
+                    </div>
+                </div>
+                <div class="rec-modal-footer">
+                    <button class="rec-btn rec-btn-ghost" onclick="closeModal()">Cancel</button>
+                    <button class="rec-btn rec-btn-primary" onclick="saveRecommendation()">
+                        <i class="fas fa-save"></i> <span id="saveBtnText">Save</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirm Modal -->
+        <div id="recDeleteModal" class="rec-overlay" onclick="handleDeleteOverlayClick(event)">
+            <div class="rec-modal rec-modal-sm">
+                <div class="rec-modal-header">
+                    <h3>Delete Recommendation</h3>
+                    <button class="rec-close-btn" onclick="closeDeleteModal()"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="rec-modal-body">
+                    <p style="color: rgba(255,255,255,0.7); font-size: 14px; margin: 0;">
+                        Are you sure you want to delete
+                        <strong id="deleteRecName" style="color:#fff;"></strong>'s recommendation?
+                        This action cannot be undone.
+                    </p>
+                </div>
+                <div class="rec-modal-footer">
+                    <button class="rec-btn rec-btn-ghost" onclick="closeDeleteModal()">Cancel</button>
+                    <button class="rec-btn rec-btn-danger" onclick="confirmDelete()">
+                        <i class="fas fa-trash"></i> Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast -->
+        <div id="recToast" class="rec-toast"></div>
+    </section>
+
     <section id="contact" class="glass-section contact-section">
         <h2 class="section-title">Contact Me</h2>
 
