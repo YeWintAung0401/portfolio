@@ -201,7 +201,7 @@ async function confirmDelete() {
     if (!deleteTargetId) return;
     try {
         const res  = await fetch(
-            `${BASE_URL}/api/users/deleteRecommendation/${deleteTargetId}`,
+            `${BASE_URL}/api/users/deleteRecommendation/recommendationId=${deleteTargetId}`,
             { method: 'DELETE' }
         );
         const data = await res.json();
