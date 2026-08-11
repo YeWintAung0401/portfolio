@@ -4,40 +4,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ye Wint Aung — Flutter Developer & Full-Stack Web Application Developer. Explore my projects, skills, and experience.">
     <title>Ye Wint Aung | Portfolio</title>
     <link rel="icon" type="image/png" href="MaskX.png">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
 
+    <!-- Particle Canvas Background -->
+    <canvas id="particleCanvas"></canvas>
+
     <div class="cursor-glow"></div>
 
-    <nav class="navbar">
-         <div class="logo">
+    <nav class="navbar" id="navbar">
+        <div class="logo">
             <img src="MaskX.png" alt="YWA Logo">
         </div>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#education" class="nav-link">Education</a></li>
+            <li><a href="#recommendations" class="nav-link" id="recNavLink">Recommendations</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
         </ul>
     </nav>
 
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-badge">✦ Available for hire</div>
             <h1>Ye Wint Aung</h1>
-            <h2><span> Flutter Developer & Full‑Stack Web Application Developer </span></h2>
+            <h2><span class="typing-text" id="typingText"></span><span class="typing-cursor">|</span></h2>
 
             <div class="hero-btns">
-                <a href="#contact" class="btn primary">Hire Me</a>
-                <a href="YeWintAung Resume.pdf" class="btn primary" download>Download CV</a>
+                <a href="#contact" class="btn primary"><i class="fas fa-paper-plane"></i> Hire Me</a>
+                <a href="YeWintAung Resume.pdf" class="btn glass" download><i class="fas fa-download"></i> Download
+                    CV</a>
             </div>
 
             <div class="working-box">
@@ -46,98 +55,121 @@
             </div>
 
             <div class="social-icons">
-                <a href="https://www.facebook.com/share/1Btgx8SDD7/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/rex._.codes?igsh=djBnd3NveHh4d21l"><i class="fab fa-instagram"></i></a>
-                <a href="https://github.com/YeWintAung0401" target="_blank"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/ye-wint-aung-a54633301" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://www.facebook.com/share/1Btgx8SDD7/?mibextid=wwXIfr" target="_blank"
+                    aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/rex._.codes?igsh=djBnd3NveHh4d21l" target="_blank"
+                    aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="https://github.com/YeWintAung0401" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/ye-wint-aung-a54633301" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
             </div>
         </div>
     </section>
 
-    <section id="about" class="glass-section">
+    <section id="about" class="glass-section" data-animate>
         <h2 class="section-title">About Me</h2>
-        <ul>
-            <li>Dedicated and flexible Software Developer with nearly 3 years of experience at Myanmar Information Technology Pte Ltd.</li>
-            <li>Experienced in Full‑Stack Web Development and Front‑End Mobile App Development. Able to manage multiple roles, adapt to new technologies and create scalable solutions for web and mobile platforms.</li>
-            <li>Strong teamwork, communication and problem‑solving skills with passion for learning modern technologies.</li>
-        </ul>
+        <div class="about-content">
+            <ul>
+                <li>Dedicated and flexible Software Developer with <span id="aboutExperience"></span> of experience at
+                    Myanmar Information
+                    Technology Pte Ltd.</li>
+                <li>Experienced in Full‑Stack Web Development and Front‑End Mobile App Development. Able to manage
+                    multiple roles, adapt to new technologies and create scalable solutions for web and mobile
+                    platforms.</li>
+                <li>Strong teamwork, communication and problem‑solving skills with passion for learning modern
+                    technologies.</li>
+            </ul>
+        </div>
     </section>
 
-    <section id="skills" class="glass-section">
+    <section id="skills" class="glass-section" data-animate>
         <h2 class="section-title">Programming Languages & Skills</h2>
         <div class="skills-grid">
-            <div class="skill-card"><i class="fa-brands fa-flutter"></i><span>Flutter</span></div>
-            <div class="skill-card"><i class="fa-brands fa-angular"></i><span>Angular</span></div>
-            <div class="skill-card"><i class="fa-brands fa-react"></i><span>React Native</span></div>
-            <div class="skill-card"><i class="fa-brands fa-node-js"></i><span>NodeJs</span></div>
-            <div class="skill-card"><i class="fa-brands fa-java"></i><span>Java</span></div>
-            <div class="skill-card"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
-            <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
-            <div class="skill-card"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
-            <div class="skill-card"><i class="fa-brands fa-github"></i><span>GitHub</span></div>
-            <div class="skill-card"><i class="fa-solid fa-database"></i><span>SQL</span></div>
-            <div class="skill-card"><i class="fa-solid fa-server"></i><span>Spring Boot</span></div>
-            <div class="skill-card"><i class="fa-solid fa-code"></i><span>REST API</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-flutter"></i><span>Flutter</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-angular"></i><span>Angular</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-react"></i><span>React Native</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-node-js"></i><span>NodeJs</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-java"></i><span>Java</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-brands fa-github"></i><span>GitHub</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-solid fa-database"></i><span>SQL</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-solid fa-server"></i><span>Spring Boot</span></div>
+            <div class="skill-card" data-animate-child><i class="fa-solid fa-code"></i><span>REST API</span></div>
         </div>
     </section>
 
-    <section id="experience" class="glass-section">
+    <section id="experience" class="glass-section" data-animate>
         <h2 class="section-title">Experience</h2>
 
-        <div class="timeline-card">
-            <h3>Full‑Stack Web Application Developer</h3>
-            <h4>Myanmar Information Technology Pte Ltd | July 2023 – Present</h4>
-            <ul>
-                <li>Developed real‑time inventory management features using Angular & Spring Boot.</li>
-                <li>Built hospital management systems including iThis & iOPD.</li>
-                <li>Implemented authentication, API integrations and admin dashboards.</li>
-                <li>Performed testing, optimization and deployment.</li>
-                <li>Worked in Agile team environments.</li>
-            </ul>
-        </div>
+        <div class="timeline">
+            <div class="timeline-card" data-animate-child>
+                <div class="timeline-dot"></div>
+                <h3>Full‑Stack Web Application Developer</h3>
+                <h4>Myanmar Information Technology Pte Ltd | July 2023 – Present</h4>
+                <ul>
+                    <li>Developed real‑time inventory management features using Angular & Spring Boot.</li>
+                    <li>Built hospital management systems including iThis & iOPD.</li>
+                    <li>Implemented authentication, API integrations and admin dashboards.</li>
+                    <li>Performed testing, optimization and deployment.</li>
+                    <li>Worked in Agile team environments.</li>
+                </ul>
+            </div>
 
-        <div class="timeline-card">
-            <h3>Frontend Software Developer (Flutter)</h3>
-            <h4>Myanmar Information Technology Pte Ltd | Nov 2024 – Present</h4>
-            <ul>
-                <li>Developed Asia Royal & Grand Hantha healthcare mobile apps.</li>
-                <li>Built booking systems, doctor availability and account registration.</li>
-                <li>Integrated REST APIs with GetX state management.</li>
-                <li>Optimized performance and multilingual support.</li>
-            </ul>
+            <div class="timeline-card" data-animate-child>
+                <div class="timeline-dot"></div>
+                <h3>Frontend Software Developer (Flutter)</h3>
+                <h4>Myanmar Information Technology Pte Ltd | Nov 2024 – Present</h4>
+                <ul>
+                    <li>Developed Asia Royal & Grand Hantha healthcare mobile apps.</li>
+                    <li>Built booking systems, doctor availability and account registration.</li>
+                    <li>Integrated REST APIs with GetX state management.</li>
+                    <li>Optimized performance and multilingual support.</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <section id="projects" class="glass-section">
+    <section id="projects" class="glass-section" data-animate>
         <h2 class="section-title">Projects</h2>
 
         <div class="project-grid">
 
-            <div class="project-card">
+            <div class="project-card" data-animate-child>
+                <div class="project-card-accent"></div>
                 <h3>Asia Royal</h3>
                 <p>Published healthcare mobile application with appointment booking, doctor availability and
                     multilingual support.</p>
                 <div class="store-links">
-                    <a href="https://apps.apple.com/us/app/asia-royal/id6747708232" class="store-btn apple">App Store</a>
-                    <a href="https://play.google.com/store/apps/details?id=com.arh.asiaroyal" class="store-btn play">Play Store</a>
+                    <a href="https://apps.apple.com/us/app/asia-royal/id6747708232" class="store-btn apple"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.arh.asiaroyal" class="store-btn play"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>
                 </div>
             </div>
 
-            <div class="project-card">
-                <h3>Grand Hantha (Hantha Care)</h3>
+            <div class="project-card" data-animate-child>
+                <div class="project-card-accent"></div>
+                <h3>Hantha Care</h3>
                 <p>Healthcare booking and patient management application with optimized cross‑platform performance.</p>
                 <div class="store-links">
-                    <a href="https://apps.apple.com/us/app/hantha-care/id6446814920" class="store-btn apple">App Store</a>
-                    <a href="https://play.google.com/apps/internaltest/4700305522895248636" class="store-btn play">Internal Testing</a>
+                    <a href="https://apps.apple.com/us/app/hantha-care/id6446814920" class="store-btn apple"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-apple"></i> App Store</a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ghih.hanthacare" class="store-btn play"
+                        target="_blank" rel="noopener noreferrer"><i class="fab fa-google-play"></i> Play Store</a>
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-animate-child>
+                <div class="project-card-accent"></div>
                 <h3>iThis</h3>
                 <p>Hospital management web application with patient registration, room management and reports.</p>
             </div>
 
-            <div class="project-card">
+            <div class="project-card" data-animate-child>
+                <div class="project-card-accent"></div>
                 <h3>E‑commerce POS</h3>
                 <p>Product, inventory and merchant management web application.</p>
             </div>
@@ -145,12 +177,12 @@
         </div>
     </section>
 
-    <section id="education" class="glass-section">
+    <section id="education" class="glass-section" data-animate>
         <h2 class="section-title">Education</h2>
 
         <div class="education-grid">
 
-            <div class="education-card">
+            <div class="education-card" data-animate-child>
                 <div class="edu-icon">
                     <i class="fas fa-graduation-cap"></i>
                 </div>
@@ -163,7 +195,7 @@
                 </div>
             </div>
 
-            <div class="education-card">
+            <div class="education-card" data-animate-child>
                 <div class="edu-icon">
                     <i class="fas fa-university"></i>
                 </div>
@@ -179,8 +211,8 @@
         </div>
     </section>
 
-    <!-- ── RECOMMENDATIONS SECTION ── add before #contact section -->
-    <section id="recommendations" class="glass-section recommendations-section">
+    <!-- ── RECOMMENDATIONS SECTION ── -->
+    <section id="recommendations" class="glass-section recommendations-section" data-animate>
         <h2 class="section-title">Recommendations</h2>
 
         <!-- Toolbar — Add button only -->
@@ -223,7 +255,8 @@
                     </div>
                     <div class="rec-field">
                         <label>Recommendation <span class="rec-required">*</span></label>
-                        <textarea id="recText" class="rec-input rec-textarea" placeholder="Write the recommendation..."></textarea>
+                        <textarea id="recText" class="rec-input rec-textarea"
+                            placeholder="Write the recommendation..."></textarea>
                     </div>
                     <div class="rec-field">
                         <label>Rating</label>
@@ -273,7 +306,7 @@
         <div id="recToast" class="rec-toast"></div>
     </section>
 
-    <section id="contact" class="glass-section contact-section">
+    <section id="contact" class="glass-section contact-section" data-animate>
         <h2 class="section-title">Contact Me</h2>
 
         <div class="contact-list">
@@ -287,12 +320,24 @@
                 <span>yewintaung0401@gmail.com</span>
             </a>
 
-            <a href="https://www.linkedin.com/in/ye-wint-aung-a54633301" target="_blank" class="contact-card linkedin-card">
+            <a href="https://www.linkedin.com/in/ye-wint-aung-a54633301" target="_blank"
+                class="contact-card linkedin-card">
                 <i class="fa-brands fa-linkedin"></i>
                 <span>LinkedIn Profile</span>
             </a>
         </div>
     </section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 Ye Wint Aung. Crafted with passion.</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top -->
+    <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
 
     <script src="script.js"></script>
 </body>
