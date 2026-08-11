@@ -63,9 +63,10 @@ animateGlow();
     let particles = [];
     let microStars = [];
     let spaceDust = [];
-    const PARTICLE_COUNT = 200;
-    const MICRO_STAR_COUNT = 200;
-    const SPACE_DUST_COUNT = 40;
+    const isMobile = window.innerWidth <= 768;
+    const PARTICLE_COUNT = isMobile ? 60 : 200;
+    const MICRO_STAR_COUNT = isMobile ? 60 : 200;
+    const SPACE_DUST_COUNT = isMobile ? 12 : 40;
     const CONNECTION_DIST = 120;
     let frame = 0;
 
